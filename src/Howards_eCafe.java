@@ -81,16 +81,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             matchaButton.setVisible(true);
             sodaButton.setVisible(true);
             icedTeaButton.setVisible(true);
-        } else if (e.getSource() == latteButton) {
-            
-        } else if (e.getSource() == cappuccinoButton) {
-            
-        } else if (e.getSource() == mochaButton) {
-            
-        } else if (e.getSource() == matchaButton) {
-            
-        } else if (e.getSource() == sodaButton) {
-            
+        } else if (e.getSource() == latteButton) {            
+        } else if (e.getSource() == cappuccinoButton) {            
+        } else if (e.getSource() == mochaButton) {            
+        } else if (e.getSource() == matchaButton) {            
+        } else if (e.getSource() == sodaButton) {            
         } else if (e.getSource() == icedTeaButton) {
             
         }
