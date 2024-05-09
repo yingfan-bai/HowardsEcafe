@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Howards_eCafe {
+public class Howards_eCafe extends JFrame implements ActionListener {
 
 	public static void main(String[] args) {
 		Test this if finlays changes
