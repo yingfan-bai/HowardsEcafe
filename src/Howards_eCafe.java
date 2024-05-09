@@ -9,12 +9,18 @@ import javax.swing.JLabel;
 
 public class Howards_eCafe extends JFrame implements ActionListener {
 
+	private JLabel welcomeLabel;
+	
 	public Howards_eCafe (){ 
 		super("Howards_eCafe");
 
         Container c = getContentPane(); 
         c.setBackground(Color.WHITE); 
         c.setLayout(new FlowLayout());
+        
+        welcomeLabel = new JLabel("Welcome to Howards eCafe!"); 
+        c.add(welcomeLabel); 
+
 
     }
 	
