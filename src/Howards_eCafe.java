@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 public class Howards_eCafe extends JFrame implements ActionListener {
 
 	public static void main(String[] args) {
-		Test this if finlays changes
+		Finlay changed again
 
 	}
 
