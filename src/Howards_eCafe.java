@@ -13,14 +13,14 @@ public class Howards_eCafe extends JFrame implements ActionListener {
 		super("Howards_eCafe");
 
         Container c = getContentPane(); 
-        c.setBackground(Color.BLACK); 
+        c.setBackground(Color.WHITE); 
         c.setLayout(new FlowLayout());
 
     }
 	
 	public static void main(String[] args) {
 		Howards_eCafe window = new Howards_eCafe(); 
-        window.setBounds(100,100, 800, 300); 
+        window.setBounds(100,100, 800, 800); 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
         window.setVisible(true); 
 
