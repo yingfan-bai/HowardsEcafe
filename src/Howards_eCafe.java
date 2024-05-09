@@ -20,7 +20,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
 	
 	public static void main(String[] args) {
 		Howards_eCafe window = new Howards_eCafe(); 
-        window.setBounds(1000,1000, 800, 300); 
+        window.setBounds(100,100, 800, 300); 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
         window.setVisible(true); 
 
@@ -28,4 +28,4 @@ public class Howards_eCafe extends JFrame implements ActionListener {
 
 	}
 
-}
+
