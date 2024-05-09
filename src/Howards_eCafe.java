@@ -9,8 +9,22 @@ import javax.swing.JLabel;
 
 public class Howards_eCafe extends JFrame implements ActionListener {
 
+	public Howards_eCafe (){ 
+		super("Howards_eCafe");
+
+        Container c = getContentPane(); 
+        c.setBackground(Color.BLACK); 
+        c.setLayout(new FlowLayout());
+
+    }
+	
 	public static void main(String[] args) {
-		Finlay changed again
+		Howards_eCafe window = new Howards_eCafe(); 
+        window.setBounds(1000,1000, 800, 300); 
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        window.setVisible(true); 
+
+    }
 
 	}
 
