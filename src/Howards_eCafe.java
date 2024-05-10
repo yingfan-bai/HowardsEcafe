@@ -3,9 +3,15 @@ import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.FlowLayout;
+import java.awt.Image;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.Box;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 
 public class Howards_eCafe extends JFrame implements ActionListener {
 
@@ -149,7 +155,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         shakeButton.setVisible(false);
         c.add(shakeButton);
         
-        chocolatemilkButton = new JButton("Chocolate Milk");
+        ImageIcon imageIcon = new ImageIcon("src/imgs/chocolate milk.jpeg"); // load the image to a imageIcon
+        Image image = imageIcon.getImage(); // transform it 
+        Image newimg = image.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon icon = new ImageIcon(newimg);
+        chocolatemilkButton = new JButton(icon);
         chocolatemilkButton.addActionListener(this);
         chocolatemilkButton.setVisible(false);
         c.add(chocolatemilkButton);
