@@ -39,6 +39,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     private JButton bananabreadButton;
     private JButton donutButton;
     private JButton lemonloafButton;
+    
+    public int correct = 0;
 
 
     public Howards_eCafe() {
@@ -239,8 +241,17 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             chocchipcookieButton.setVisible(true);
             bananabreadButton.setVisible(true);
             donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
-        } else if (e.getSource() == hotchocolateButton) {    
+            lemonloafButton.setVisible(true);}
+            
+        else if (e.getSource() == iceButton && correct == 0) {
+            	System.out.println("Hello");
+            	correct = 1;
+        }
+        else if (correct == 1 && e.getSource() == milkButton) {
+            		System.out.println("hello2");
+            	}
+            	
+        else if (e.getSource() == hotchocolateButton) {    
         	welcomeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
