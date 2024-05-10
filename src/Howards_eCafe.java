@@ -22,9 +22,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     
     private JButton iceButton;
     private JButton milkButton;
-    private JButton vanillaButton;
-    private JButton caramelButton;
-    private JButton whitechocolateButton;
+    //private JButton vanillaButton;
+    //private JButton caramelButton;
+    //private JButton whitechocolateButton;
     private JButton coffeeButton;
     private JButton chocolatepowderButton;
     private JButton whippedcreamButton;
@@ -41,6 +41,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     private JButton lemonloafButton;
     
     public int correct = 0;
+    public int drink = 0;
 
 
     public Howards_eCafe() {
@@ -104,7 +105,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         milkButton.setVisible(false);
         c.add(milkButton);
         
-        vanillaButton = new JButton("Vanilla");
+        /*vanillaButton = new JButton("Vanilla");
         vanillaButton.addActionListener(this);
         vanillaButton.setVisible(false);
         c.add(vanillaButton);
@@ -114,15 +115,15 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         caramelButton.setVisible(false);
         c.add(caramelButton);
         
+        whitechocolateButton = new JButton("White Chocolate");
+        whitechocolateButton.addActionListener(this);
+        whitechocolateButton.setVisible(false);
+        c.add(whitechocolateButton);*/
+        
         chocolatepowderButton = new JButton("Chocolate Powder");
         chocolatepowderButton.addActionListener(this);
         chocolatepowderButton.setVisible(false);
         c.add(chocolatepowderButton);
-        
-        whitechocolateButton = new JButton("White Chocolate");
-        whitechocolateButton.addActionListener(this);
-        whitechocolateButton.setVisible(false);
-        c.add(whitechocolateButton);
         
         coffeeButton = new JButton("Coffee");
         coffeeButton.addActionListener(this);
@@ -215,6 +216,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             icedTeaButton.setVisible(true);
             
         } else if (e.getSource() == latteButton) {
+        	drink = 1;
         	welcomeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
@@ -225,9 +227,6 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             icedTeaButton.setVisible(false);
             iceButton.setVisible(true);
             milkButton.setVisible(true);
-            vanillaButton.setVisible(true);
-            caramelButton.setVisible(true);
-            whitechocolateButton.setVisible(true);
             coffeeButton.setVisible(true);
             chocolatepowderButton.setVisible(true);
             whippedcreamButton.setVisible(true);
@@ -242,16 +241,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             bananabreadButton.setVisible(true);
             donutButton.setVisible(true);
             lemonloafButton.setVisible(true);}
-            
-        else if (e.getSource() == iceButton && correct == 0) {
-            	System.out.println("Hello");
-            	correct = 1;
-        }
-        else if (correct == 1 && e.getSource() == milkButton) {
-            		System.out.println("hello2");
-            	}
             	
-        else if (e.getSource() == hotchocolateButton) {    
+        else if (e.getSource() == hotchocolateButton) {
+        	drink = 2;
         	welcomeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
@@ -262,121 +254,6 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             icedTeaButton.setVisible(false);
             iceButton.setVisible(true);
             milkButton.setVisible(true);
-            vanillaButton.setVisible(true);
-            caramelButton.setVisible(true);
-            whitechocolateButton.setVisible(true);
-            coffeeButton.setVisible(true);
-            chocolatepowderButton.setVisible(true);
-            whippedcreamButton.setVisible(true);
-            matchapowderButton.setVisible(true);
-            shakeButton.setVisible(true);
-            chocolatemilkButton.setVisible(true);
-            teaflavoringButton.setVisible(true);
-            sparkingwaterButton.setVisible(true);
-            syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
-        } else if (e.getSource() == mochaButton) { 
-        	welcomeLabel.setVisible(false);
-            continueButton.setVisible(false);
-            latteButton.setVisible(false);
-            hotchocolateButton.setVisible(false);
-            mochaButton.setVisible(false);
-            matchaButton.setVisible(false);
-            sodaButton.setVisible(false);
-            icedTeaButton.setVisible(false);
-            iceButton.setVisible(true);
-            milkButton.setVisible(true);
-            vanillaButton.setVisible(true);
-            caramelButton.setVisible(true);
-            whitechocolateButton.setVisible(true);
-            coffeeButton.setVisible(true);
-            chocolatepowderButton.setVisible(true);
-            whippedcreamButton.setVisible(true);
-            matchapowderButton.setVisible(true);
-            shakeButton.setVisible(true);
-            chocolatemilkButton.setVisible(true);
-            teaflavoringButton.setVisible(true);
-            sparkingwaterButton.setVisible(true);
-            syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
-        } else if (e.getSource() == matchaButton) {  
-        	welcomeLabel.setVisible(false);
-            continueButton.setVisible(false);
-            latteButton.setVisible(false);
-            hotchocolateButton.setVisible(false);
-            mochaButton.setVisible(false);
-            matchaButton.setVisible(false);
-            sodaButton.setVisible(false);
-            icedTeaButton.setVisible(false);
-            iceButton.setVisible(true);
-            milkButton.setVisible(true);
-            vanillaButton.setVisible(true);
-            caramelButton.setVisible(true);
-            whitechocolateButton.setVisible(true);
-            coffeeButton.setVisible(true);
-            chocolatepowderButton.setVisible(true);
-            whippedcreamButton.setVisible(true);
-            matchapowderButton.setVisible(true);
-            shakeButton.setVisible(true);
-            chocolatemilkButton.setVisible(true);
-            teaflavoringButton.setVisible(true);
-            sparkingwaterButton.setVisible(true);
-            syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
-        } else if (e.getSource() == sodaButton) {
-        	welcomeLabel.setVisible(false);
-            continueButton.setVisible(false);
-            latteButton.setVisible(false);
-            hotchocolateButton.setVisible(false);
-            mochaButton.setVisible(false);
-            matchaButton.setVisible(false);
-            sodaButton.setVisible(false);
-            icedTeaButton.setVisible(false);
-            iceButton.setVisible(true);
-            milkButton.setVisible(true);
-            vanillaButton.setVisible(true);
-            caramelButton.setVisible(true);
-            whitechocolateButton.setVisible(true);
-            coffeeButton.setVisible(true);
-            chocolatepowderButton.setVisible(true);
-            whippedcreamButton.setVisible(true);
-            matchapowderButton.setVisible(true);
-            shakeButton.setVisible(true);
-            chocolatemilkButton.setVisible(true);
-            teaflavoringButton.setVisible(true);
-            sparkingwaterButton.setVisible(true);
-            syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
-        } else if (e.getSource() == icedTeaButton) {
-        	welcomeLabel.setVisible(false);
-            continueButton.setVisible(false);
-            latteButton.setVisible(false);
-            hotchocolateButton.setVisible(false);
-            mochaButton.setVisible(false);
-            matchaButton.setVisible(false);
-            sodaButton.setVisible(false);
-            icedTeaButton.setVisible(false);
-            iceButton.setVisible(true);
-            milkButton.setVisible(true);
-            vanillaButton.setVisible(true);
-            caramelButton.setVisible(true);
-            whitechocolateButton.setVisible(true);
             coffeeButton.setVisible(true);
             chocolatepowderButton.setVisible(true);
             whippedcreamButton.setVisible(true);
@@ -392,6 +269,141 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             donutButton.setVisible(true);
             lemonloafButton.setVisible(true);
             
+        } else if (e.getSource() == mochaButton) { 
+        	drink = 3;
+        	welcomeLabel.setVisible(false);
+            continueButton.setVisible(false);
+            latteButton.setVisible(false);
+            hotchocolateButton.setVisible(false);
+            mochaButton.setVisible(false);
+            matchaButton.setVisible(false);
+            sodaButton.setVisible(false);
+            icedTeaButton.setVisible(false);
+            iceButton.setVisible(true);
+            milkButton.setVisible(true);
+            coffeeButton.setVisible(true);
+            chocolatepowderButton.setVisible(true);
+            whippedcreamButton.setVisible(true);
+            matchapowderButton.setVisible(true);
+            shakeButton.setVisible(true);
+            chocolatemilkButton.setVisible(true);
+            teaflavoringButton.setVisible(true);
+            sparkingwaterButton.setVisible(true);
+            syrupButton.setVisible(true);
+            croissantButton.setVisible(true);
+            chocchipcookieButton.setVisible(true);
+            bananabreadButton.setVisible(true);
+            donutButton.setVisible(true);
+            lemonloafButton.setVisible(true);
+            
+        } else if (e.getSource() == matchaButton) { 
+        	drink = 4;
+        	welcomeLabel.setVisible(false);
+            continueButton.setVisible(false);
+            latteButton.setVisible(false);
+            hotchocolateButton.setVisible(false);
+            mochaButton.setVisible(false);
+            matchaButton.setVisible(false);
+            sodaButton.setVisible(false);
+            icedTeaButton.setVisible(false);
+            iceButton.setVisible(true);
+            milkButton.setVisible(true);
+            coffeeButton.setVisible(true);
+            chocolatepowderButton.setVisible(true);
+            whippedcreamButton.setVisible(true);
+            matchapowderButton.setVisible(true);
+            shakeButton.setVisible(true);
+            chocolatemilkButton.setVisible(true);
+            teaflavoringButton.setVisible(true);
+            sparkingwaterButton.setVisible(true);
+            syrupButton.setVisible(true);
+            croissantButton.setVisible(true);
+            chocchipcookieButton.setVisible(true);
+            bananabreadButton.setVisible(true);
+            donutButton.setVisible(true);
+            lemonloafButton.setVisible(true);
+            
+        } else if (e.getSource() == sodaButton) {
+        	drink = 5;
+        	welcomeLabel.setVisible(false);
+            continueButton.setVisible(false);
+            latteButton.setVisible(false);
+            hotchocolateButton.setVisible(false);
+            mochaButton.setVisible(false);
+            matchaButton.setVisible(false);
+            sodaButton.setVisible(false);
+            icedTeaButton.setVisible(false);
+            iceButton.setVisible(true);
+            milkButton.setVisible(true);
+            coffeeButton.setVisible(true);
+            chocolatepowderButton.setVisible(true);
+            whippedcreamButton.setVisible(true);
+            matchapowderButton.setVisible(true);
+            shakeButton.setVisible(true);
+            chocolatemilkButton.setVisible(true);
+            teaflavoringButton.setVisible(true);
+            sparkingwaterButton.setVisible(true);
+            syrupButton.setVisible(true);
+            croissantButton.setVisible(true);
+            chocchipcookieButton.setVisible(true);
+            bananabreadButton.setVisible(true);
+            donutButton.setVisible(true);
+            lemonloafButton.setVisible(true);
+            
+        } else if (e.getSource() == icedTeaButton) {
+        	drink = 6;
+        	welcomeLabel.setVisible(false);
+            continueButton.setVisible(false);
+            latteButton.setVisible(false);
+            hotchocolateButton.setVisible(false);
+            mochaButton.setVisible(false);
+            matchaButton.setVisible(false);
+            sodaButton.setVisible(false);
+            icedTeaButton.setVisible(false);
+            iceButton.setVisible(true);
+            milkButton.setVisible(true);
+            coffeeButton.setVisible(true);
+            chocolatepowderButton.setVisible(true);
+            whippedcreamButton.setVisible(true);
+            matchapowderButton.setVisible(true);
+            shakeButton.setVisible(true);
+            chocolatemilkButton.setVisible(true);
+            teaflavoringButton.setVisible(true);
+            sparkingwaterButton.setVisible(true);
+            syrupButton.setVisible(true);
+            croissantButton.setVisible(true);
+            chocchipcookieButton.setVisible(true);
+            bananabreadButton.setVisible(true);
+            donutButton.setVisible(true);
+            lemonloafButton.setVisible(true);
+            
+        }
+        
+        //Latte correct order
+        else if (drink == 1 && e.getSource() == iceButton && correct == 0) {
+        	System.out.println("Ice");
+        	iceButton.setVisible(false);
+        	correct = 1;
+        }
+        else if (drink == 1 && e.getSource() == milkButton && correct == 1) {
+        	System.out.println("Milk");
+        	milkButton.setVisible(false);
+       		correct = 2;
+        }
+        else if (drink == 1 && e.getSource() == coffeeButton && correct == 2) {
+        	System.out.println("Coffee");
+        	milkButton.setVisible(false);
+       		correct = 3;
+        }
+        else if (drink == 1 && e.getSource() == chocolatepowderButton || e.getSource() == whippedcreamButton || e.getSource() == matchapowderButton || e.getSource() == shakeButton || e.getSource() == chocolatemilkButton || e.getSource() == teaflavoringButton || e.getSource() == sparkingwaterButton || e.getSource() == syrupButton || e.getSource() == croissantButton || e.getSource() == chocchipcookieButton || e.getSource() == bananabreadButton || e.getSource() == donutButton || e.getSource() == lemonloafButton) {
+        	System.out.println("Wrong");
+        	correct = 20;
+        }
+        if (drink == 1 && correct == 3) {
+        	System.out.println("You got it right!");
+        }
+        if (drink == 1 && correct > 3) {
+        	System.out.println("You got it wrong.");
         }
     }
 }
