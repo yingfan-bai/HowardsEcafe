@@ -476,6 +476,40 @@ public class Howards_eCafe extends JFrame implements ActionListener {
        		correct = 2;
         }
         
+     // Mocha checking the order
+        else if (drink == 3 && e.getSource() == iceButton && correct == 0) {
+            System.out.println("Ice");
+            iceButton.setVisible(false);
+            correct = 1;
+        }
+        else if (drink == 3 && e.getSource() == iceButton && correct != 0) {
+            correct = 20;
+        }
+
+        else if (drink == 3 && e.getSource() == chocolatemilkButton && correct == 1) {
+            System.out.println("Chocolate Milk");
+            chocolatemilkButton.setVisible(false);
+            correct = 2;
+        }
+
+        else if (drink == 3 && e.getSource() == chocolatemilkButton && correct != 1) {
+            correct = 20;
+        }
+
+        else if (drink == 3 && e.getSource() == coffeeButton && correct == 2) {
+            System.out.println("Coffee");
+            coffeeButton.setVisible(false);
+            correct = 10;
+        }
+
+        else if (drink == 3 && e.getSource() == coffeeButton && correct != 2) {
+            correct = 20;
+        }
+
+        else if (drink == 3 && (e.getSource() == milkButton || e.getSource() == chocolatepowderButton || e.getSource() == whippedcreamButton || e.getSource() == matchapowderButton || e.getSource() == shakeButton || e.getSource() == teaflavoringButton || e.getSource() == sparkingwaterButton || e.getSource() == syrupButton || e.getSource() == croissantButton || e.getSource() == chocchipcookieButton || e.getSource() == bananabreadButton || e.getSource() == donutButton || e.getSource() == lemonloafButton)) {
+            System.out.println("wrong");
+            correct = 20;
+        }
        
        
         /*else if (drink == 2 && (e.getSource() == coffeeButton || e.getSource() == iceButton || e.getSource() == matchapowderButton || e.getSource() == shakeButton || e.getSource() == chocolatemilkButton || e.getSource() == teaflavoringButton || e.getSource() == sparkingwaterButton || e.getSource() == syrupButton || e.getSource() == croissantButton || e.getSource() == chocchipcookieButton || e.getSource() == bananabreadButton || e.getSource() == donutButton || e.getSource() == lemonloafButton)) {
