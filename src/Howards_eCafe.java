@@ -110,12 +110,20 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         latteInstructions.setVisible(false);
         
         //Ingredients
-        iceButton = new JButton("Ice");
+        ImageIcon iceImageIcon = new ImageIcon("src/imgs/ice.png");
+        Image iceImage = iceImageIcon.getImage();
+        Image iceNewimg = iceImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon iceIcon = new ImageIcon(iceNewimg);
+        iceButton = new JButton(iceIcon);
         iceButton.addActionListener(this);
         iceButton.setVisible(false);
         c.add(iceButton);
         
-        milkButton = new JButton("Milk");
+        ImageIcon milkImageIcon = new ImageIcon("src/imgs/milk.png");
+        Image milkImage = milkImageIcon.getImage();
+        Image milkNewimg = milkImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon milkIcon = new ImageIcon(milkNewimg);
+        milkButton = new JButton(milkIcon);
         milkButton.addActionListener(this);
         milkButton.setVisible(false);
         c.add(milkButton);
@@ -135,56 +143,83 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         whitechocolateButton.setVisible(false);
         c.add(whitechocolateButton);*/
         
-        chocolatepowderButton = new JButton("Chocolate Powder");
+        ImageIcon chocpowderImageIcon = new ImageIcon("src/imgs/chocpowder.png");
+        Image chocpowderImage = chocpowderImageIcon.getImage();
+        Image chocpowderNewimg = chocpowderImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon chocpowderIcon = new ImageIcon(chocpowderNewimg);
+        chocolatepowderButton = new JButton(chocpowderIcon);
         chocolatepowderButton.addActionListener(this);
         chocolatepowderButton.setVisible(false);
         c.add(chocolatepowderButton);
         
-        coffeeButton = new JButton("Coffee");
+        ImageIcon coffeeImageIcon = new ImageIcon("src/imgs/coffee.png");
+        Image coffeeImage = coffeeImageIcon.getImage();
+        Image coffeeNewimg = coffeeImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon coffeeIcon = new ImageIcon(coffeeNewimg);
+        coffeeButton = new JButton(coffeeIcon);
         coffeeButton.addActionListener(this);
         coffeeButton.setVisible(false);
         c.add(coffeeButton);
         
-        iceButton = new JButton("Ice");
-        iceButton.addActionListener(this);
-        iceButton.setVisible(false);
-        c.add(iceButton);
-        
-        whippedcreamButton = new JButton("Whipped Cream");
+        ImageIcon whipcreamImageIcon = new ImageIcon("src/imgs/whipcream.png");
+        Image whipcreamImage = whipcreamImageIcon.getImage();
+        Image whipcreamNewimg = whipcreamImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon whipcreamIcon = new ImageIcon(whipcreamNewimg);
+        whippedcreamButton = new JButton(whipcreamIcon);
         whippedcreamButton.addActionListener(this);
         whippedcreamButton.setVisible(false);
         c.add(whippedcreamButton);
         
-        matchapowderButton = new JButton("Matcha Powder");
+        ImageIcon matchapowderImageIcon = new ImageIcon("src/imgs/matchapowder.png");
+        Image matchapowderImage = matchapowderImageIcon.getImage();
+        Image matchapowderNewimg = matchapowderImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon matchapowderIcon = new ImageIcon(matchapowderNewimg);
+        matchapowderButton = new JButton(matchapowderIcon);
         matchapowderButton.addActionListener(this);
         matchapowderButton.setVisible(false);
         c.add(matchapowderButton);
         
-        shakeButton = new JButton("Shake");
+        ImageIcon shakeImageIcon = new ImageIcon("src/imgs/shake.png");
+        Image shakeImage = shakeImageIcon.getImage();
+        Image shakeNewimg = shakeImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon shakeIcon = new ImageIcon(shakeNewimg);
+        shakeButton = new JButton(shakeIcon);
         shakeButton.addActionListener(this);
         shakeButton.setVisible(false);
         c.add(shakeButton);
         
-        ImageIcon imageIcon = new ImageIcon("src/imgs/chocolate milk.jpeg"); // load the image to a imageIcon
-        Image image = imageIcon.getImage(); // transform it 
-        Image newimg = image.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
-        Icon icon = new ImageIcon(newimg);
-        chocolatemilkButton = new JButton(icon);
+        ImageIcon chocmilkImageIcon = new ImageIcon("src/imgs/chocmilk.png"); // load the image to a imageIcon
+        Image chocmilkImage = chocmilkImageIcon.getImage(); // transform it 
+        Image chocmilkNewimg = chocmilkImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon chocmilkIcon = new ImageIcon(chocmilkNewimg);
+        chocolatemilkButton = new JButton(chocmilkIcon);
         chocolatemilkButton.addActionListener(this);
         chocolatemilkButton.setVisible(false);
         c.add(chocolatemilkButton);
         
-        teaflavoringButton = new JButton("Tea Flavoring");
+        ImageIcon teaImageIcon = new ImageIcon("src/imgs/tea.png");
+        Image teaImage = teaImageIcon.getImage();
+        Image teaNewimg = teaImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon teaIcon = new ImageIcon(teaNewimg);
+        teaflavoringButton = new JButton(teaIcon);
         teaflavoringButton.addActionListener(this);
         teaflavoringButton.setVisible(false);
         c.add(teaflavoringButton);
         
-        sparkingwaterButton = new JButton("Sparking Water");
+        ImageIcon clubsodaImageIcon = new ImageIcon("src/imgs/clubsoda.png");
+        Image clubsodaImage = clubsodaImageIcon.getImage();
+        Image clubsodaNewimg = clubsodaImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon clubsodaIcon = new ImageIcon(clubsodaNewimg);
+        sparkingwaterButton = new JButton(clubsodaIcon);
         sparkingwaterButton.addActionListener(this);
         sparkingwaterButton.setVisible(false);
         c.add(sparkingwaterButton);
         
-        syrupButton = new JButton("Syrup");
+        ImageIcon syrupImageIcon = new ImageIcon("src/imgs/syrup.png");
+        Image syrupImage = syrupImageIcon.getImage();
+        Image syrupNewimg = syrupImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon syrupIcon = new ImageIcon(syrupNewimg);
+        syrupButton = new JButton(syrupIcon);
         syrupButton.addActionListener(this);
         syrupButton.setVisible(false);
         c.add(syrupButton);
@@ -213,7 +248,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         lemonloafButton.addActionListener(this);
         lemonloafButton.setVisible(false);
         c.add(lemonloafButton);
-        
+                
         wrongLabel = new JLabel("You got it wrong.");
         wrongLabel.setVisible(false);
         c.add(wrongLabel);
@@ -300,11 +335,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             teaflavoringButton.setVisible(true);
             sparkingwaterButton.setVisible(true);
             syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);}
+            croissantButton.setVisible(false);
+            chocchipcookieButton.setVisible(false);
+            bananabreadButton.setVisible(false);
+            donutButton.setVisible(false);
+            lemonloafButton.setVisible(false);}
             	
         else if (e.getSource() == hotchocolateButton) {
         	drink = 2;
@@ -327,11 +362,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             teaflavoringButton.setVisible(true);
             sparkingwaterButton.setVisible(true);
             syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
+            croissantButton.setVisible(false);
+            chocchipcookieButton.setVisible(false);
+            bananabreadButton.setVisible(false);
+            donutButton.setVisible(false);
+            lemonloafButton.setVisible(false);
             
         } else if (e.getSource() == mochaButton) { 
         	drink = 3;
@@ -354,11 +389,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             teaflavoringButton.setVisible(true);
             sparkingwaterButton.setVisible(true);
             syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
+            croissantButton.setVisible(false);
+            chocchipcookieButton.setVisible(false);
+            bananabreadButton.setVisible(false);
+            donutButton.setVisible(false);
+            lemonloafButton.setVisible(false);
             
         } else if (e.getSource() == matchaButton) { 
         	drink = 4;
@@ -381,11 +416,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             teaflavoringButton.setVisible(true);
             sparkingwaterButton.setVisible(true);
             syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
+            croissantButton.setVisible(false);
+            chocchipcookieButton.setVisible(false);
+            bananabreadButton.setVisible(false);
+            donutButton.setVisible(false);
+            lemonloafButton.setVisible(false);
             
         } else if (e.getSource() == sodaButton) {
         	drink = 5;
@@ -408,11 +443,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             teaflavoringButton.setVisible(true);
             sparkingwaterButton.setVisible(true);
             syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
+            croissantButton.setVisible(false);
+            chocchipcookieButton.setVisible(false);
+            bananabreadButton.setVisible(false);
+            donutButton.setVisible(false);
+            lemonloafButton.setVisible(false);
             
         } else if (e.getSource() == icedTeaButton) {
         	drink = 6;
@@ -435,11 +470,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             teaflavoringButton.setVisible(true);
             sparkingwaterButton.setVisible(true);
             syrupButton.setVisible(true);
-            croissantButton.setVisible(true);
-            chocchipcookieButton.setVisible(true);
-            bananabreadButton.setVisible(true);
-            donutButton.setVisible(true);
-            lemonloafButton.setVisible(true);
+            croissantButton.setVisible(false);
+            chocchipcookieButton.setVisible(false);
+            bananabreadButton.setVisible(false);
+            donutButton.setVisible(false);
+            lemonloafButton.setVisible(false);
             
         }
         
