@@ -531,7 +531,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         }
         else if (drink == 4 && e.getSource() == milkButton && correct == 2) {
             System.out.println("Milk");
-            milkButton.setVisible(true);
+            milkButton.setVisible(false);
             correct = 3;
         }
         else if (drink == 4 && e.getSource() == milkButton && correct == 4) {
@@ -545,7 +545,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         else if (drink == 4 && e.getSource() == shakeButton && correct == 3) {
             System.out.println("Shake");
             shakeButton.setVisible(false);
-            correct = 4;
+            correct = 10;
         }
         else if (drink == 4 && e.getSource() == shakeButton && correct != 3) {
             correct = 20;
