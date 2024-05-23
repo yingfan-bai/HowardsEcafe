@@ -112,7 +112,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         //Ingredients
         ImageIcon iceImageIcon = new ImageIcon("src/imgs/ice.png");
         Image iceImage = iceImageIcon.getImage();
-        Image iceNewimg = iceImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image iceNewimg = iceImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon iceIcon = new ImageIcon(iceNewimg);
         iceButton = new JButton(iceIcon);
         iceButton.addActionListener(this);
@@ -121,7 +121,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon milkImageIcon = new ImageIcon("src/imgs/milk.png");
         Image milkImage = milkImageIcon.getImage();
-        Image milkNewimg = milkImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image milkNewimg = milkImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon milkIcon = new ImageIcon(milkNewimg);
         milkButton = new JButton(milkIcon);
         milkButton.addActionListener(this);
@@ -145,7 +145,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon chocpowderImageIcon = new ImageIcon("src/imgs/chocpowder.png");
         Image chocpowderImage = chocpowderImageIcon.getImage();
-        Image chocpowderNewimg = chocpowderImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image chocpowderNewimg = chocpowderImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon chocpowderIcon = new ImageIcon(chocpowderNewimg);
         chocolatepowderButton = new JButton(chocpowderIcon);
         chocolatepowderButton.addActionListener(this);
@@ -154,7 +154,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon coffeeImageIcon = new ImageIcon("src/imgs/coffee.png");
         Image coffeeImage = coffeeImageIcon.getImage();
-        Image coffeeNewimg = coffeeImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image coffeeNewimg = coffeeImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon coffeeIcon = new ImageIcon(coffeeNewimg);
         coffeeButton = new JButton(coffeeIcon);
         coffeeButton.addActionListener(this);
@@ -163,7 +163,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon whipcreamImageIcon = new ImageIcon("src/imgs/whipcream.png");
         Image whipcreamImage = whipcreamImageIcon.getImage();
-        Image whipcreamNewimg = whipcreamImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image whipcreamNewimg = whipcreamImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon whipcreamIcon = new ImageIcon(whipcreamNewimg);
         whippedcreamButton = new JButton(whipcreamIcon);
         whippedcreamButton.addActionListener(this);
@@ -172,7 +172,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon matchapowderImageIcon = new ImageIcon("src/imgs/matchapowder.png");
         Image matchapowderImage = matchapowderImageIcon.getImage();
-        Image matchapowderNewimg = matchapowderImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image matchapowderNewimg = matchapowderImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon matchapowderIcon = new ImageIcon(matchapowderNewimg);
         matchapowderButton = new JButton(matchapowderIcon);
         matchapowderButton.addActionListener(this);
@@ -181,7 +181,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon shakeImageIcon = new ImageIcon("src/imgs/shake.png");
         Image shakeImage = shakeImageIcon.getImage();
-        Image shakeNewimg = shakeImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image shakeNewimg = shakeImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon shakeIcon = new ImageIcon(shakeNewimg);
         shakeButton = new JButton(shakeIcon);
         shakeButton.addActionListener(this);
@@ -190,7 +190,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon chocmilkImageIcon = new ImageIcon("src/imgs/chocmilk.png"); // load the image to a imageIcon
         Image chocmilkImage = chocmilkImageIcon.getImage(); // transform it 
-        Image chocmilkNewimg = chocmilkImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image chocmilkNewimg = chocmilkImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon chocmilkIcon = new ImageIcon(chocmilkNewimg);
         chocolatemilkButton = new JButton(chocmilkIcon);
         chocolatemilkButton.addActionListener(this);
@@ -199,7 +199,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon teaImageIcon = new ImageIcon("src/imgs/tea.png");
         Image teaImage = teaImageIcon.getImage();
-        Image teaNewimg = teaImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image teaNewimg = teaImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon teaIcon = new ImageIcon(teaNewimg);
         teaflavoringButton = new JButton(teaIcon);
         teaflavoringButton.addActionListener(this);
@@ -208,7 +208,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon clubsodaImageIcon = new ImageIcon("src/imgs/clubsoda.png");
         Image clubsodaImage = clubsodaImageIcon.getImage();
-        Image clubsodaNewimg = clubsodaImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image clubsodaNewimg = clubsodaImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon clubsodaIcon = new ImageIcon(clubsodaNewimg);
         sparkingwaterButton = new JButton(clubsodaIcon);
         sparkingwaterButton.addActionListener(this);
@@ -217,7 +217,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon syrupImageIcon = new ImageIcon("src/imgs/syrup.png");
         Image syrupImage = syrupImageIcon.getImage();
-        Image syrupNewimg = syrupImage.getScaledInstance(40, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image syrupNewimg = syrupImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
         Icon syrupIcon = new ImageIcon(syrupNewimg);
         syrupButton = new JButton(syrupIcon);
         syrupButton.addActionListener(this);
@@ -248,12 +248,20 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         lemonloafButton.addActionListener(this);
         lemonloafButton.setVisible(false);
         c.add(lemonloafButton);
-                
-        wrongLabel = new JLabel("You got it wrong.");
+            
+        ImageIcon loseImageIcon = new ImageIcon("src/imgs/losescreen.png");
+        Image loseImage = loseImageIcon.getImage();
+        Image loseNewimg = loseImage.getScaledInstance(400, 600,  java.awt.Image.SCALE_SMOOTH);
+        Icon loseIcon = new ImageIcon(loseNewimg);
+        wrongLabel = new JLabel(loseIcon);
         wrongLabel.setVisible(false);
         c.add(wrongLabel);
         
-        rightLabel = new JLabel("You got it right!");
+        ImageIcon winImageIcon = new ImageIcon("src/imgs/winscreen.png");
+        Image winImage = winImageIcon.getImage();
+        Image winNewimg = winImage.getScaledInstance(400, 600,  java.awt.Image.SCALE_SMOOTH);
+        Icon winIcon = new ImageIcon(winNewimg);
+        rightLabel = new JLabel(winIcon);
         rightLabel.setVisible(false);
         c.add(rightLabel);
         
