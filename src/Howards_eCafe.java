@@ -11,6 +11,11 @@ import javax.swing.JLabel;
 import javax.swing.Box;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import java.io.File;
+
 
 
 public class Howards_eCafe extends JFrame implements ActionListener {
@@ -50,6 +55,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     
     public int correct = 0;
     public int drink = 0;
+    private Clip correctClip;
+    private Clip wrongClip;
 
 
     public Howards_eCafe() {
@@ -214,6 +221,19 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         rightLabel = new JLabel("You got it right!");
         rightLabel.setVisible(false);
         c.add(rightLabel);
+        
+        try {
+            AudioInputStream correctAudioStream = AudioSystem.getAudioInputStream(new File("src/audio/correct.wav"));
+            correctClip = AudioSystem.getClip();
+            correctClip.open(correctAudioStream);
+
+            AudioInputStream wrongAudioStream = AudioSystem.getAudioInputStream(new File("src/audio/wrong.wav"));
+            wrongClip = AudioSystem.getClip();
+            wrongClip.open(wrongAudioStream);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }        
+        playBackgroundMusic("src/audio/background_music.wav");
     }
 
     public static void main(String[] args) {
@@ -221,6 +241,29 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         window.setBounds(100, 100, 400, 600);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
+    }
+    
+    private void playBackgroundMusic(String filePath) {
+        try {
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(filePath));
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    private void playSoundEffect(String filePath) {
+        try {
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(new File(filePath));
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -622,8 +665,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         //Correct or not screens
         if (correct == 10) {
-        	System.out.println("You got it right!");
-        	welcomeLabel.setVisible(false);
+            System.out.println("You got it right!");
+            welcomeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
             hotchocolateButton.setVisible(false);
@@ -648,10 +691,13 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
             rightLabel.setVisible(true);
+            playSoundEffect("src/audio/correct_answer.wav"); 
         }
+
+        // After you check if the answer is wrong
         if (correct == 20) {
-        	System.out.println("You got it wrong.");
-        	welcomeLabel.setVisible(false);
+            System.out.println("You got it wrong.");
+            welcomeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
             hotchocolateButton.setVisible(false);
@@ -676,8 +722,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
             wrongLabel.setVisible(true);
-           
-        }
+            playSoundEffect("src/audio/wrong_answer.wav");         }
     }
 }
 
