@@ -266,11 +266,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         c.add(rightLabel);
         
         try {
-            AudioInputStream correctAudioStream = AudioSystem.getAudioInputStream(new File("src/audio/correct.wav"));
+            AudioInputStream correctAudioStream = AudioSystem.getAudioInputStream(new File("src/audio/correct_answer.wav"));
             correctClip = AudioSystem.getClip();
             correctClip.open(correctAudioStream);
 
-            AudioInputStream wrongAudioStream = AudioSystem.getAudioInputStream(new File("src/audio/wrong.wav"));
+            AudioInputStream wrongAudioStream = AudioSystem.getAudioInputStream(new File("src/audio/wrong_answer.wav"));
             wrongClip = AudioSystem.getClip();
             wrongClip.open(wrongAudioStream);
         } catch (Exception e) {
