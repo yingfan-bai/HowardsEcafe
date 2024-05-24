@@ -74,32 +74,56 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         c.add(continueButton);
         
         //menu
-        latteButton = new JButton("Latte");
+        ImageIcon latteImageIcon = new ImageIcon("src/imgs/icedlatte.png");
+        Image latteImage = latteImageIcon.getImage();
+        Image latteNewimg = latteImage.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+        Icon latteIcon = new ImageIcon(latteNewimg);
+        latteButton = new JButton(latteIcon);
         latteButton.addActionListener(this);
         latteButton.setVisible(false);
         c.add(latteButton);
-
-        hotchocolateButton = new JButton("Hot Chocolate");
+        
+        ImageIcon hotchocImageIcon = new ImageIcon("src/imgs/hotchoc.png");
+        Image hotchocImage = hotchocImageIcon.getImage();
+        Image hotchocNewimg = hotchocImage.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+        Icon hotchocIcon = new ImageIcon(hotchocNewimg);
+        hotchocolateButton = new JButton(hotchocIcon);
         hotchocolateButton.addActionListener(this);
         hotchocolateButton.setVisible(false);
         c.add(hotchocolateButton);
 
-        mochaButton = new JButton("Mocha");
+        ImageIcon mochaImageIcon = new ImageIcon("src/imgs/mocha.png");
+        Image mochaImage = mochaImageIcon.getImage();
+        Image mochaNewimg = mochaImage.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+        Icon mochaIcon = new ImageIcon(mochaNewimg);
+        mochaButton = new JButton(mochaIcon);
         mochaButton.addActionListener(this);
         mochaButton.setVisible(false);
         c.add(mochaButton);
 
-        matchaButton = new JButton("Matcha");
+        ImageIcon matchaImageIcon = new ImageIcon("src/imgs/matcha.png");
+        Image matchaImage = matchaImageIcon.getImage();
+        Image matchaNewimg = matchaImage.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+        Icon matchaIcon = new ImageIcon(matchaNewimg);
+        matchaButton = new JButton(matchaIcon);
         matchaButton.addActionListener(this);
         matchaButton.setVisible(false);
         c.add(matchaButton);
 
-        sodaButton = new JButton("Soda");
+        ImageIcon sodaImageIcon = new ImageIcon("src/imgs/soda.png");
+        Image sodaImage = sodaImageIcon.getImage();
+        Image sodaNewimg = sodaImage.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+        Icon sodaIcon = new ImageIcon(sodaNewimg);
+        sodaButton = new JButton(sodaIcon);
         sodaButton.addActionListener(this);
         sodaButton.setVisible(false);
         c.add(sodaButton);
-
-        icedTeaButton = new JButton("Iced Tea");
+        
+        ImageIcon icedteaImageIcon = new ImageIcon("src/imgs/icedtea.png");
+        Image icedteaImage = icedteaImageIcon.getImage();
+        Image icedteaNewimg = icedteaImage.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+        Icon icedteaIcon = new ImageIcon(icedteaNewimg);
+        icedTeaButton = new JButton(icedteaIcon);
         icedTeaButton.addActionListener(this);
         icedTeaButton.setVisible(false);
         c.add(icedTeaButton);
