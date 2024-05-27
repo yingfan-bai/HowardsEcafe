@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,7 +15,6 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
-import javax.swing.JLayeredPane;
 
 
 
@@ -62,38 +60,18 @@ public class Howards_eCafe extends JFrame implements ActionListener {
 
 
     public Howards_eCafe() {
-    	super("Howards_eCafe");
+        super("Howards_eCafe");
 
         Container c = getContentPane();
         c.setBackground(Color.WHITE);
-        c.setLayout(null);  // Set to null to use absolute positioning
+        c.setLayout(new FlowLayout());
 
-        // Create the JLayeredPane
-        JLayeredPane layeredPane = new JLayeredPane();
-        layeredPane.setPreferredSize(new Dimension(400, 600));
+        welcomeLabel = new JLabel("Welcome to Howards eCafe!");
+        c.add(welcomeLabel);
 
-        // Add the start screen image to a JLabel
-        ImageIcon startImageIcon = new ImageIcon("src/imgs/startscreen.png");
-        Image startImage = startImageIcon.getImage();
-        Image startNewimg = startImage.getScaledInstance(400, 600, Image.SCALE_SMOOTH);
-        ImageIcon startIcon = new ImageIcon(startNewimg);
-        welcomeLabel = new JLabel(startIcon);
-        welcomeLabel.setBounds(0, 0, 400, 600);
-        layeredPane.add(welcomeLabel, Integer.valueOf(1));  // Add to layer 1
-
-        // Create the continue button
         continueButton = new JButton("Continue");
-        continueButton.setBounds(150, 500, 100, 40);  // Position the button
         continueButton.addActionListener(this);
-        layeredPane.add(continueButton, Integer.valueOf(2));  // Add to layer 2
-
-        c.add(layeredPane);  // Add the layered pane to the container
-        layeredPane.setBounds(0, 0, 400, 600);  // Set bounds for the layered pane
-
-        // Set the frame size and make it visible
-        setSize(400, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
+        c.add(continueButton);
         
         //menu
         ImageIcon latteImageIcon = new ImageIcon("src/imgs/icedlatte.png");
@@ -606,6 +584,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         	System.out.println("whip cream");
         	whippedcreamButton.setVisible(false);
        		correct = 2;
+        }
+        
+        else if (drink == 2 && (e.getSource() == iceButton || e.getSource() == coffeeButton || e.getSource() == matchapowderButton || e.getSource() == shakeButton || e.getSource() == chocolatemilkButton || e.getSource() == teaflavoringButton || e.getSource() == sparkingwaterButton || e.getSource() == syrupButton || e.getSource() == croissantButton || e.getSource() == chocchipcookieButton || e.getSource() == bananabreadButton || e.getSource() == donutButton || e.getSource() == lemonloafButton)) {
+        	System.out.println("wrong");
+        	correct = 20;
         }
         
      // Mocha checking the order
