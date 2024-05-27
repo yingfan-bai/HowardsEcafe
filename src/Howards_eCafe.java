@@ -594,6 +594,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
        		correct = 2;
         }
         
+        else if (drink == 2 && (e.getSource() == iceButton || e.getSource() == coffeeButton || e.getSource() == matchapowderButton || e.getSource() == shakeButton || e.getSource() == chocolatemilkButton || e.getSource() == teaflavoringButton || e.getSource() == sparkingwaterButton || e.getSource() == syrupButton || e.getSource() == croissantButton || e.getSource() == chocchipcookieButton || e.getSource() == bananabreadButton || e.getSource() == donutButton || e.getSource() == lemonloafButton)) {
+        	System.out.println("wrong");
+        	correct = 20;
+        }
+        
      // Mocha checking the order
         else if (drink == 3 && e.getSource() == iceButton && correct == 0) {
             System.out.println("Ice");
