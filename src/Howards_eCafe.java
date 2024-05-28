@@ -8,15 +8,12 @@ import java.awt.Image;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.Box;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
-
-
 
 public class Howards_eCafe extends JFrame implements ActionListener {
 
@@ -31,12 +28,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     
     private JLabel latteInstructions;
     
-  
     private JButton iceButton;
     private JButton milkButton;
-    //private JButton vanillaButton;
-    //private JButton caramelButton;
-    //private JButton whitechocolateButton;
     private JButton coffeeButton;
     private JButton chocolatepowderButton;
     private JButton whippedcreamButton;
@@ -51,6 +44,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     private JButton bananabreadButton;
     private JButton donutButton;
     private JButton lemonloafButton;
+    private JButton instructionsButton;
+    private JButton menuButton;
     private JLabel wrongLabel;
     private JLabel rightLabel;
     
@@ -74,7 +69,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         continueButton.addActionListener(this);
         c.add(continueButton);
         
-        //menu
+               
+        //Menu
                 
         ImageIcon latteImageIcon = new ImageIcon("src/imgs/icedlatte.png");
         Image latteImage = latteImageIcon.getImage();
@@ -130,12 +126,12 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         icedTeaButton.setVisible(false);
         c.add(icedTeaButton);
         
-        //Instructions
+        //Latte Instructions
         latteInstructions = new JLabel("Ice, Milk, Flavoring, Coffee");
         c.add(latteInstructions);
         latteInstructions.setVisible(false);
         
-        //Ingredients
+        //Images for Ingredients
         ImageIcon iceImageIcon = new ImageIcon("src/imgs/ice.png");
         Image iceImage = iceImageIcon.getImage();
         Image iceNewimg = iceImage.getScaledInstance(80, 80,  java.awt.Image.SCALE_SMOOTH);
@@ -153,21 +149,6 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         milkButton.addActionListener(this);
         milkButton.setVisible(false);
         c.add(milkButton);
-        
-        /*vanillaButton = new JButton("Vanilla");
-        vanillaButton.addActionListener(this);
-        vanillaButton.setVisible(false);
-        c.add(vanillaButton);
-        
-        caramelButton = new JButton("Caramel");
-        caramelButton.addActionListener(this);
-        caramelButton.setVisible(false);
-        c.add(caramelButton);
-        
-        whitechocolateButton = new JButton("White Chocolate");
-        whitechocolateButton.addActionListener(this);
-        whitechocolateButton.setVisible(false);
-        c.add(whitechocolateButton);*/
         
         ImageIcon chocpowderImageIcon = new ImageIcon("src/imgs/chocpowder.png");
         Image chocpowderImage = chocpowderImageIcon.getImage();
@@ -274,6 +255,16 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         lemonloafButton.addActionListener(this);
         lemonloafButton.setVisible(false);
         c.add(lemonloafButton);
+        
+        instructionsButton = new JButton("Instructions");
+        instructionsButton.addActionListener(this);
+        instructionsButton.setVisible(false);
+        c.add(instructionsButton);
+
+        menuButton = new JButton("Menu Button");
+        menuButton.addActionListener(this);
+        menuButton.setVisible(false);
+        c.add(menuButton);
             
         ImageIcon loseImageIcon = new ImageIcon("src/imgs/losescreen.png");
         Image loseImage = loseImageIcon.getImage();
@@ -299,8 +290,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             AudioInputStream wrongAudioStream = AudioSystem.getAudioInputStream(new File("src/audio/wrong_answer.wav"));
             wrongClip = AudioSystem.getClip();
             wrongClip.open(wrongAudioStream);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e) { //catch is used to handle exceptions, it declares  that this block can handle exceptions of type Exception
+            e.printStackTrace(); //The variable e is a reference to the actual exception object that was thrown.
+//printStackTrace() is a method of the Throwable class (which Exception extends) that prints the stack trace of the exception to the standard error stream. The stack trace is a list of method calls that shows where the exception occurred, which is useful for debugging.
+            
         }        
         playBackgroundMusic("src/audio/background_music.wav");
     }
@@ -347,6 +340,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             matchaButton.setVisible(true);
             sodaButton.setVisible(true);
             icedTeaButton.setVisible(true);
+            instructionsButton.setVisible(true);
+            menuButton.setVisible(false);
             
         } else if (e.getSource() == latteButton) {
         	drink = 1;
@@ -374,6 +369,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             bananabreadButton.setVisible(false);
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
+            instructionsButton.setVisible(false);
+            menuButton.setVisible(false);
+
             }
             	
         else if (e.getSource() == hotchocolateButton) {
@@ -402,7 +400,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             bananabreadButton.setVisible(false);
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
-            
+            instructionsButton.setVisible(false);
+            menuButton.setVisible(false);             
 
             
         } else if (e.getSource() == mochaButton) { 
@@ -431,6 +430,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             bananabreadButton.setVisible(false);
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
+            instructionsButton.setVisible(false);
+            menuButton.setVisible(false);
+
            
             
         } else if (e.getSource() == matchaButton) { 
@@ -459,6 +461,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             bananabreadButton.setVisible(false);
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
+            instructionsButton.setVisible(false);
+            menuButton.setVisible(false);
+
                        
         } else if (e.getSource() == sodaButton) {
         	drink = 5;
@@ -486,6 +491,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             bananabreadButton.setVisible(false);
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
+            instructionsButton.setVisible(false);
+            menuButton.setVisible(false);
+
            
             
         } else if (e.getSource() == icedTeaButton) {
@@ -513,10 +521,50 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             chocchipcookieButton.setVisible(false);
             bananabreadButton.setVisible(false);
             donutButton.setVisible(false);
-            lemonloafButton.setVisible(false);
-            
-            
+            lemonloafButton.setVisible(false); 
+            instructionsButton.setVisible(false);
+            menuButton.setVisible(false);
+
         }
+            
+            else if (e.getSource() == instructionsButton) {
+                continueButton.setVisible(false);
+                instructionsButton.setVisible(false);
+                welcomeLabel.setVisible(false);
+                continueButton.setVisible(false);
+                latteButton.setVisible(false);
+                hotchocolateButton.setVisible(false);
+                mochaButton.setVisible(false);
+                matchaButton.setVisible(false);
+                sodaButton.setVisible(false);
+                icedTeaButton.setVisible(false);
+                iceButton.setVisible(false);
+                milkButton.setVisible(false);
+                coffeeButton.setVisible(false);
+                chocolatepowderButton.setVisible(false);
+                whippedcreamButton.setVisible(false);
+                matchapowderButton.setVisible(false);
+                shakeButton.setVisible(false);
+                chocolatemilkButton.setVisible(false);
+                teaflavoringButton.setVisible(false);
+                sparkingwaterButton.setVisible(false);
+                syrupButton.setVisible(false);
+                croissantButton.setVisible(false);
+                chocchipcookieButton.setVisible(false);
+                bananabreadButton.setVisible(false);
+                donutButton.setVisible(false);
+                lemonloafButton.setVisible(false);
+                menuButton.setVisible(true); 
+
+                // Set layout to null to manually position the menu button
+                getContentPane().setLayout(null);
+                menuButton.setBounds((getWidth() - menuButton.getPreferredSize().width) / 2,
+                        (getHeight() - menuButton.getPreferredSize().height) / 2,
+                        menuButton.getPreferredSize().width, menuButton.getPreferredSize().height);
+
+            }
+        
+    
         
         //Latte checking if the order is correct
         else if (drink == 1 && e.getSource() == iceButton && correct == 0) {
@@ -771,6 +819,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
             rightLabel.setVisible(true);
+            instructionsButton.setVisible(false);
+            menuButton.setVisible(false);
+
             playSoundEffect("src/audio/correct_answer.wav"); 
         }
 
@@ -802,7 +853,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
             wrongLabel.setVisible(true);
+            instructionsButton.setVisible(false);
+            menuButton.setVisible(false);
+            
             playSoundEffect("src/audio/wrong_answer.wav");         }
     }
 }
+
 
