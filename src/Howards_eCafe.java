@@ -1,5 +1,7 @@
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.FlowLayout;
@@ -8,6 +10,7 @@ import java.awt.Image;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.Box;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -53,6 +56,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     private JButton lemonloafButton;
     private JLabel wrongLabel;
     private JLabel rightLabel;
+    private JLabel backgroundLabel;
+    private JLayeredPane layeredPane;
     
     public int correct = 0;
     public int drink = 0;
@@ -64,17 +69,46 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         super("Howards_eCafe");
 
         Container c = getContentPane();
-        c.setBackground(Color.WHITE);
+        c.setBackground(Color.white);
         c.setLayout(new FlowLayout());
 
         welcomeLabel = new JLabel("Welcome to Howards eCafe!");
-        c.add(welcomeLabel);
+        //c.add(welcomeLabel);
+        
+     // Create a layered pane
+        layeredPane = new JLayeredPane();
+        layeredPane.setPreferredSize(new Dimension(400, 600)); // Set the size of the layered pane
+        
+        // Load the background image
+        ImageIcon backgroundImageIcon = new ImageIcon("src/imgs/startscreennostart.png");
+        Image backgroundImage = backgroundImageIcon.getImage();
+        Image scaledBackgroundImage = backgroundImage.getScaledInstance(400, 600, Image.SCALE_SMOOTH); // Adjust the size as needed
+        ImageIcon scaledBackgroundIcon = new ImageIcon(scaledBackgroundImage);
 
-        continueButton = new JButton("Continue");
+        // Create a JLabel with the background image and add it to the layered pane
+        JLabel backgroundLabel = new JLabel(scaledBackgroundIcon);
+        backgroundLabel.setBounds(0, 0, 400, 600); // Set the bounds to cover the entire layered pane
+        layeredPane.add(backgroundLabel, JLayeredPane.DEFAULT_LAYER); // Add the background to the default layer
+        
+        // Add other components (buttons, labels, etc.) directly to the content pane of the layered pane
+        ImageIcon startImageIcon = new ImageIcon("src/imgs/startbutton.png");
+        Image startImage = startImageIcon.getImage();
+        Image startNewimg = startImage.getScaledInstance(136, 53,  java.awt.Image.SCALE_SMOOTH);
+        Icon startIcon = new ImageIcon(startNewimg);
+        continueButton = new JButton(startIcon);
+        continueButton.setBounds(135, 400, 136, 53); // Set the bounds of the button
         continueButton.addActionListener(this);
-        c.add(continueButton);
+        layeredPane.add(continueButton, JLayeredPane.PALETTE_LAYER); // Add the button to the palette layer
+
+        // Add the layered pane to the frame
+        getContentPane().add(layeredPane, BorderLayout.CENTER);
+
+        setSize(400, 400); // Adjust the size according to your needs
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
         
         //menu
+        
                 
         ImageIcon latteImageIcon = new ImageIcon("src/imgs/icedlatte.png");
         Image latteImage = latteImageIcon.getImage();
@@ -337,9 +371,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-    	System.out.println(correct);
         if (e.getSource() == continueButton) {
+        	System.out.println("continute");
             welcomeLabel.setVisible(false);
+            layeredPane.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(true);
             hotchocolateButton.setVisible(true);
@@ -563,7 +598,6 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         	System.out.println("Choc powder");
         	chocolatepowderButton.setVisible(false);
         	correct = 1;
-        	System.out.println(correct);
         }
         else if (drink == 2 && e.getSource() == chocolatepowderButton && correct != 0) {
         	System.out.println("You died");
@@ -573,7 +607,6 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         	System.out.println("Milk");
         	milkButton.setVisible(false);
        		correct = 2;
-       		System.out.println(correct);
         }
         
         else if (drink == 2 && e.getSource() == milkButton && correct != 1) {
@@ -805,4 +838,5 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             playSoundEffect("src/audio/wrong_answer.wav");         }
     }
 }
+
 
