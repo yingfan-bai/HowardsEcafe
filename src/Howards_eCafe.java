@@ -610,12 +610,6 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
             menuButton.setVisible(false); 
-
-                // Set layout to null to manually position the menu button
-                getContentPane().setLayout(null);
-                menuButton.setBounds((getWidth() - menuButton.getPreferredSize().width) / 2,
-                        (getHeight() - menuButton.getPreferredSize().height) / 2,
-                        menuButton.getPreferredSize().width, menuButton.getPreferredSize().height);
             }
                    
         //Latte checking if the order is correct
