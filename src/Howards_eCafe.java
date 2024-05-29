@@ -294,7 +294,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         instructionsButton.setVisible(false);
         c.add(instructionsButton);
 
-        menuButton = new JButton("Menu Button");
+        menuButton = new JButton("Return to Menu");
         menuButton.addActionListener(this);
         menuButton.setVisible(false);
         c.add(menuButton);
