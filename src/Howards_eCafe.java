@@ -294,11 +294,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         instructionsButton.setVisible(false);
         c.add(instructionsButton);
 
-        ImageIcon backImageIcon = new ImageIcon("src/imgs/backbutton.png");
-        Image backImage = backImageIcon.getImage();
-        Image backNewimg = backImage.getScaledInstance(75, 50,  java.awt.Image.SCALE_SMOOTH);
-        Icon backIcon = new ImageIcon(backNewimg);
-        menuButton = new JButton(backIcon);
+        
+        menuButton = new JButton("Return to Menu");
         menuButton.addActionListener(this);
         menuButton.setVisible(false);
         c.add(menuButton);
