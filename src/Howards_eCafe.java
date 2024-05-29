@@ -83,7 +83,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
 
         // Create a JLabel with the background image and add it to the layered pane
         JLabel backgroundLabel = new JLabel(scaledBackgroundIcon);
-        backgroundLabel.setBounds(0, 0, 400, 600); // Set the bounds to cover the entire layered pane
+        backgroundLabel.setBounds(-5, 0, 400, 600); // Set the bounds to cover the entire layered pane
         layeredPane.add(backgroundLabel, JLayeredPane.DEFAULT_LAYER); // Add the background to the default layer
         
         // Add other components (buttons, labels, etc.) directly to the content pane of the layered pane
