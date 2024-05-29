@@ -295,10 +295,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         c.add(instructionsButton);
 
         
-        menuButton = new JButton("Return to Menu");
-        menuButton.addActionListener(this);
-        menuButton.setVisible(false);
-        c.add(menuButton);
+       
             
         ImageIcon loseImageIcon = new ImageIcon("src/imgs/losescreen.png");
         Image loseImage = loseImageIcon.getImage();
@@ -323,6 +320,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         recipeLabel = new JLabel(recipeIcon);
         recipeLabel.setVisible(false);
         c.add(recipeLabel);
+        
+        menuButton = new JButton("Return to Menu");
+        menuButton.addActionListener(this);
+        menuButton.setVisible(false);
+        c.add(menuButton);
         
         try {
             AudioInputStream correctAudioStream = AudioSystem.getAudioInputStream(new File("src/audio/correct_answer.wav"));
