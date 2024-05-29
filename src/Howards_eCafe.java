@@ -326,6 +326,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         menuButton.setVisible(false);
         c.add(menuButton);
         
+        
+        
         try {
             AudioInputStream correctAudioStream = AudioSystem.getAudioInputStream(new File("src/audio/correct_answer.wav"));
             correctClip = AudioSystem.getClip();
@@ -376,10 +378,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == continueButton) {
         	System.out.println("continute");
-            welcomeLabel.setVisible(false);
             recipeLabel.setVisible(false);
             layeredPane.setVisible(false);
-            continueButton.setVisible(false);
             latteButton.setVisible(true);
             hotchocolateButton.setVisible(true);
             mochaButton.setVisible(true);
@@ -631,7 +631,12 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             lemonloafButton.setVisible(false);
             menuButton.setVisible(false); 
             }
-                   
+                  
+        //Correct indications
+        if (drink == 1 && correct == 0) {
+        	System.out.println("Hello");
+        }
+        
         //Latte checking if the order is correct
         if (drink == 1 && e.getSource() == iceButton && correct == 0) {
         	System.out.println("Ice");
