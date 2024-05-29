@@ -637,7 +637,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     	layeredPane.setVisible(true);
     	rightLabel.setVisible(false);
     	rightLabel.setVisible(false);
-    	wrongLabel.setVisible(false);    	
+    	wrongLabel.setVisible(false); 
+    	continueButton.setVisible(true);
         instructionsButton.setVisible(false);
         recipeLabel.setVisible(false);
         latteButton.setVisible(false);
