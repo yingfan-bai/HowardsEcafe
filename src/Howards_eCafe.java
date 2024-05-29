@@ -53,6 +53,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     private JLabel wrongLabel;
     private JLabel rightLabel;
     private JLabel backgroundLabel;
+    private JLabel recipeLabel;
     private JLayeredPane layeredPane;
     
     public int correct = 0;
@@ -293,7 +294,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         instructionsButton.setVisible(false);
         c.add(instructionsButton);
 
-        menuButton = new JButton("Menu Button");
+        menuButton = new JButton("Return to Menu");
         menuButton.addActionListener(this);
         menuButton.setVisible(false);
         c.add(menuButton);
@@ -580,6 +581,35 @@ public class Howards_eCafe extends JFrame implements ActionListener {
                 donutButton.setVisible(false);
                 lemonloafButton.setVisible(false);
                 menuButton.setVisible(true); 
+                
+        } else if (e.getSource() == menuButton) {
+            continueButton.setVisible(false);
+            instructionsButton.setVisible(true);
+            welcomeLabel.setVisible(false);
+            continueButton.setVisible(false);
+            latteButton.setVisible(true);
+            hotchocolateButton.setVisible(true);
+            mochaButton.setVisible(true);
+            matchaButton.setVisible(true);
+            sodaButton.setVisible(true);
+            icedTeaButton.setVisible(true);
+            iceButton.setVisible(false);
+            milkButton.setVisible(false);
+            coffeeButton.setVisible(false);
+            chocolatepowderButton.setVisible(false);
+            whippedcreamButton.setVisible(false);
+            matchapowderButton.setVisible(false);
+            shakeButton.setVisible(false);
+            chocolatemilkButton.setVisible(false);
+            teaflavoringButton.setVisible(false);
+            sparkingwaterButton.setVisible(false);
+            syrupButton.setVisible(false);
+            croissantButton.setVisible(false);
+            chocchipcookieButton.setVisible(false);
+            bananabreadButton.setVisible(false);
+            donutButton.setVisible(false);
+            lemonloafButton.setVisible(false);
+            menuButton.setVisible(false); 
 
                 // Set layout to null to manually position the menu button
                 getContentPane().setLayout(null);
