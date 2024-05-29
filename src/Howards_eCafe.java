@@ -377,6 +377,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == continueButton) {
         	System.out.println("continute");
+            playagainButton.setVisible(false);
             welcomeLabel.setVisible(false);
             recipeLabel.setVisible(false);
             layeredPane.setVisible(false);
@@ -393,6 +394,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         } else if (e.getSource() == latteButton) {
         	drink = 1;
         	welcomeLabel.setVisible(false);
+        	playagainButton.setVisible(false);
         	recipeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
@@ -424,6 +426,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         else if (e.getSource() == hotchocolateButton) {
         	drink = 2;
         	welcomeLabel.setVisible(false);
+        	playagainButton.setVisible(false);
         	recipeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
@@ -454,6 +457,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         } else if (e.getSource() == mochaButton) { 
         	drink = 3;
         	welcomeLabel.setVisible(false);
+        	playagainButton.setVisible(false);
         	recipeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
@@ -484,6 +488,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         } else if (e.getSource() == matchaButton) { 
         	drink = 4;
         	welcomeLabel.setVisible(false);
+        	playagainButton.setVisible(false);
         	recipeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
@@ -514,6 +519,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         } else if (e.getSource() == sodaButton) {
         	drink = 5;
         	welcomeLabel.setVisible(false);
+        	playagainButton.setVisible(false);
         	recipeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
@@ -544,6 +550,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         } else if (e.getSource() == icedTeaButton) {
         	drink = 6;
         	welcomeLabel.setVisible(false);
+        	playagainButton.setVisible(false);
         	recipeLabel.setVisible(false);
             continueButton.setVisible(false);
             latteButton.setVisible(false);
@@ -574,6 +581,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             
         } else if (e.getSource() == instructionsButton) {
                 continueButton.setVisible(false);
+                playagainButton.setVisible(false);
                 recipeLabel.setVisible(true);
                 instructionsButton.setVisible(false);
                 welcomeLabel.setVisible(false);
@@ -604,6 +612,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
                 
         } else if (e.getSource() == menuButton) {
             continueButton.setVisible(false);
+            playagainButton.setVisible(false);
             instructionsButton.setVisible(true);
             welcomeLabel.setVisible(false);
             recipeLabel.setVisible(false);
