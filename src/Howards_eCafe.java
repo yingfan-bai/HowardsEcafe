@@ -297,18 +297,13 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         c.add(instructionsButton);
 
         
-     // Play again button setup
         ImageIcon playagainImageIcon = new ImageIcon("src/imgs/playagain.png");
         Image playagainImage = playagainImageIcon.getImage();
-        int playagainButtonWidth = 100;
-        int playagainButtonHeight = 40;
-        Image playagainNewimg = playagainImage.getScaledInstance(playagainButtonWidth, playagainButtonHeight, java.awt.Image.SCALE_SMOOTH);
+        Image playagainNewimg = playagainImage.getScaledInstance(100, 40,  java.awt.Image.SCALE_SMOOTH);
         Icon playagainIcon = new ImageIcon(playagainNewimg);
-        
         playagainButton = new JButton(playagainIcon);
         playagainButton.addActionListener(this);
         playagainButton.setVisible(false);
-        playagainButton.setPreferredSize(new Dimension(playagainButtonWidth, playagainButtonHeight));
         c.add(playagainButton);
             
         ImageIcon loseImageIcon = new ImageIcon("src/imgs/losescreen.png");
@@ -336,7 +331,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         menuButton = new JButton(backbuttonIcon);
         menuButton.addActionListener(this);
         menuButton.setVisible(false);
-        //this code works
+        
         // Set the button's preferred size to match the image dimensions
         menuButton.setPreferredSize(new Dimension(30, 40));
         
