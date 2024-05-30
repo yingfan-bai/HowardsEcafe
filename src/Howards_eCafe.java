@@ -336,7 +336,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         menuButton = new JButton(backbuttonIcon);
         menuButton.addActionListener(this);
         menuButton.setVisible(false);
-        
+        //this code works
         // Set the button's preferred size to match the image dimensions
         menuButton.setPreferredSize(new Dimension(30, 40));
         
