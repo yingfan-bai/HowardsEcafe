@@ -308,7 +308,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             
         ImageIcon loseImageIcon = new ImageIcon("src/imgs/losescreen.png");
         Image loseImage = loseImageIcon.getImage();
-        Image loseNewimg = loseImage.getScaledInstance(400, 600,  java.awt.Image.SCALE_SMOOTH);
+        Image loseNewimg = loseImage.getScaledInstance(350, 500,  java.awt.Image.SCALE_SMOOTH);
         Icon loseIcon = new ImageIcon(loseNewimg);
         wrongLabel = new JLabel(loseIcon);
         wrongLabel.setVisible(false);
@@ -316,7 +316,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon winImageIcon = new ImageIcon("src/imgs/winscreen.png");
         Image winImage = winImageIcon.getImage();
-        Image winNewimg = winImage.getScaledInstance(400, 600,  java.awt.Image.SCALE_SMOOTH);
+        Image winNewimg = winImage.getScaledInstance(350, 500,  java.awt.Image.SCALE_SMOOTH);
         Icon winIcon = new ImageIcon(winNewimg);
         rightLabel = new JLabel(winIcon);
         rightLabel.setVisible(false);
