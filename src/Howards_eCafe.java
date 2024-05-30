@@ -56,6 +56,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     private JLabel backgroundLabel;
     private JLabel recipeLabel;
     private JLayeredPane layeredPane;
+    private JLayeredPane recipelayeredPane;
     
     public int correct = 0;
     public int drink = 0;
@@ -295,7 +296,12 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         instructionsButton.setVisible(false);
         c.add(instructionsButton);
 
-        playagainButton = new JButton("Play Again");
+        
+        ImageIcon playagainImageIcon = new ImageIcon("src/imgs/playagain.png");
+        Image playagainImage = playagainImageIcon.getImage();
+        Image playagainNewimg = playagainImage.getScaledInstance(100, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon playagainIcon = new ImageIcon(playagainNewimg);
+        playagainButton = new JButton(playagainIcon);
         playagainButton.addActionListener(this);
         playagainButton.setVisible(false);
         c.add(playagainButton);
@@ -316,6 +322,15 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         rightLabel.setVisible(false);
         c.add(rightLabel);
         
+        ImageIcon backbuttonImageIcon = new ImageIcon("src/imgs/backbutton.png");
+        Image backbuttonImage = backbuttonImageIcon.getImage();
+        Image backbuttonNewimg = backbuttonImage.getScaledInstance(30, 40,  java.awt.Image.SCALE_SMOOTH);
+        Icon backbuttonIcon = new ImageIcon(backbuttonNewimg);
+        menuButton = new JButton(backbuttonIcon);
+        menuButton.addActionListener(this);
+        menuButton.setVisible(false);
+        c.add(menuButton);
+        
         ImageIcon recipeImageIcon = new ImageIcon("src/imgs/recipes.png");
         Image recipeImage = recipeImageIcon.getImage();
         Image recipeNewimg = recipeImage.getScaledInstance(350, 500,  java.awt.Image.SCALE_SMOOTH);
@@ -324,10 +339,6 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         recipeLabel.setVisible(false);
         c.add(recipeLabel);
         
-        menuButton = new JButton("Return to Menu");
-        menuButton.addActionListener(this);
-        menuButton.setVisible(false);
-        c.add(menuButton);
         
         
         try {
