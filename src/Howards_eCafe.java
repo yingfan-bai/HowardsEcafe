@@ -327,20 +327,15 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         rightLabel.setVisible(false);
         c.add(rightLabel);
         
+        
+        
         ImageIcon backbuttonImageIcon = new ImageIcon("src/imgs/backbutton.png");
         Image backbuttonImage = backbuttonImageIcon.getImage();
-        Image backbuttonNewimg = backbuttonImage.getScaledInstance(30, 40, java.awt.Image.SCALE_SMOOTH);
+        Image backbuttonNewimg = backbuttonImage.getScaledInstance(30, 40,  java.awt.Image.SCALE_SMOOTH);
         Icon backbuttonIcon = new ImageIcon(backbuttonNewimg);
-        
-        // Create the button with the icon
         menuButton = new JButton(backbuttonIcon);
         menuButton.addActionListener(this);
         menuButton.setVisible(false);
-        
-        // Set the button's preferred size to match the image dimensions
-        menuButton.setPreferredSize(new Dimension(30, 40));
-        
-        // Add the button to the container
         c.add(menuButton);
         
         ImageIcon recipeImageIcon = new ImageIcon("src/imgs/recipes.png");
