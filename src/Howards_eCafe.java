@@ -116,6 +116,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         latteButton = new JButton(latteIcon);
         latteButton.addActionListener(this);
         latteButton.setVisible(false);
+        latteButton.setBackground(Color.white);
+        latteButton.setForeground(Color.white);
+        latteButton.setBorderPainted(false);
         c.add(latteButton);
         
         ImageIcon hotchocImageIcon = new ImageIcon("src/imgs/hotchoc.png");
@@ -125,6 +128,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         hotchocolateButton = new JButton(hotchocIcon);
         hotchocolateButton.addActionListener(this);
         hotchocolateButton.setVisible(false);
+        hotchocolateButton.setBackground(Color.white);
+        hotchocolateButton.setForeground(Color.white);
+        hotchocolateButton.setBorderPainted(false);
         c.add(hotchocolateButton);
 
         ImageIcon mochaImageIcon = new ImageIcon("src/imgs/mocha.png");
@@ -134,6 +140,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         mochaButton = new JButton(mochaIcon);
         mochaButton.addActionListener(this);
         mochaButton.setVisible(false);
+        mochaButton.setBackground(Color.white);
+        mochaButton.setForeground(Color.white);
+        mochaButton.setBorderPainted(false);
         c.add(mochaButton);
 
         ImageIcon matchaImageIcon = new ImageIcon("src/imgs/matcha.png");
@@ -143,6 +152,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         matchaButton = new JButton(matchaIcon);
         matchaButton.addActionListener(this);
         matchaButton.setVisible(false);
+        matchaButton.setBackground(Color.white);
+        matchaButton.setForeground(Color.white);
+        matchaButton.setBorderPainted(false);
         c.add(matchaButton);
 
         ImageIcon sodaImageIcon = new ImageIcon("src/imgs/soda.png");
@@ -152,6 +164,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         sodaButton = new JButton(sodaIcon);
         sodaButton.addActionListener(this);
         sodaButton.setVisible(false);
+        sodaButton.setBorderPainted(false);
+        sodaButton.setBackground(Color.white);
+        sodaButton.setForeground(Color.white);
         c.add(sodaButton);
         
         ImageIcon icedteaImageIcon = new ImageIcon("src/imgs/icedtea.png");
@@ -161,6 +176,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         icedTeaButton = new JButton(icedteaIcon);
         icedTeaButton.addActionListener(this);
         icedTeaButton.setVisible(false);
+        icedTeaButton.setBorderPainted(false);
+        icedTeaButton.setBackground(Color.white);
+        icedTeaButton.setForeground(Color.white);
         c.add(icedTeaButton);
         
         //Instructions
@@ -184,6 +202,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         iceButton = new JButton(iceIcon);
         iceButton.addActionListener(this);
         iceButton.setVisible(false);
+        iceButton.setBorderPainted(false);
+        iceButton.setBackground(Color.white);
+        iceButton.setForeground(Color.white);
+        iceButton.setFocusPainted(false);
         c.add(iceButton);
         
         ImageIcon milkImageIcon = new ImageIcon("src/imgs/milk.png");
@@ -193,6 +215,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         milkButton = new JButton(milkIcon);
         milkButton.addActionListener(this);
         milkButton.setVisible(false);
+        milkButton.setBorderPainted(false);
+        milkButton.setBackground(Color.white);
+        milkButton.setForeground(Color.white);
+        milkButton.setFocusPainted(false);
         c.add(milkButton);
                 
         ImageIcon chocpowderImageIcon = new ImageIcon("src/imgs/chocpowder.png");
@@ -202,6 +228,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         chocolatepowderButton = new JButton(chocpowderIcon);
         chocolatepowderButton.addActionListener(this);
         chocolatepowderButton.setVisible(false);
+        chocolatepowderButton.setBorderPainted(false);
+        chocolatepowderButton.setBackground(Color.white);
+        chocolatepowderButton.setForeground(Color.white);
+        chocolatepowderButton.setFocusPainted(false);
         c.add(chocolatepowderButton);
         
         ImageIcon coffeeImageIcon = new ImageIcon("src/imgs/coffee.png");
@@ -211,6 +241,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         coffeeButton = new JButton(coffeeIcon);
         coffeeButton.addActionListener(this);
         coffeeButton.setVisible(false);
+        coffeeButton.setBorderPainted(false);
+        coffeeButton.setBackground(Color.white);
+        coffeeButton.setForeground(Color.white);
+        coffeeButton.setFocusPainted(false);
         c.add(coffeeButton);
         
         ImageIcon whipcreamImageIcon = new ImageIcon("src/imgs/whipcream.png");
@@ -220,6 +254,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         whippedcreamButton = new JButton(whipcreamIcon);
         whippedcreamButton.addActionListener(this);
         whippedcreamButton.setVisible(false);
+        whippedcreamButton.setBorderPainted(false);
+        whippedcreamButton.setBackground(Color.white);
+        whippedcreamButton.setForeground(Color.white);
+        whippedcreamButton.setFocusPainted(false);
         c.add(whippedcreamButton);
         
         ImageIcon matchapowderImageIcon = new ImageIcon("src/imgs/matchapowder.png");
@@ -229,6 +267,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         matchapowderButton = new JButton(matchapowderIcon);
         matchapowderButton.addActionListener(this);
         matchapowderButton.setVisible(false);
+        matchapowderButton.setBorderPainted(false);
+        matchapowderButton.setBackground(Color.white);
+        matchapowderButton.setForeground(Color.white);
+        matchapowderButton.setFocusPainted(false);
         c.add(matchapowderButton);
         
         ImageIcon shakeImageIcon = new ImageIcon("src/imgs/shake.png");
@@ -238,6 +280,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         shakeButton = new JButton(shakeIcon);
         shakeButton.addActionListener(this);
         shakeButton.setVisible(false);
+        shakeButton.setBorderPainted(false);
+        shakeButton.setBackground(Color.white);
+        shakeButton.setForeground(Color.white);
+        shakeButton.setFocusPainted(false);
         c.add(shakeButton);
         
         ImageIcon chocmilkImageIcon = new ImageIcon("src/imgs/chocmilk.png"); // load the image to a imageIcon
@@ -247,6 +293,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         chocolatemilkButton = new JButton(chocmilkIcon);
         chocolatemilkButton.addActionListener(this);
         chocolatemilkButton.setVisible(false);
+        chocolatemilkButton.setBorderPainted(false);
+        chocolatemilkButton.setBackground(Color.white);
+        chocolatemilkButton.setForeground(Color.white);
+        chocolatemilkButton.setFocusPainted(false);
         c.add(chocolatemilkButton);
         
         ImageIcon teaImageIcon = new ImageIcon("src/imgs/tea.png");
@@ -256,6 +306,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         teaflavoringButton = new JButton(teaIcon);
         teaflavoringButton.addActionListener(this);
         teaflavoringButton.setVisible(false);
+        teaflavoringButton.setBorderPainted(false);
+        teaflavoringButton.setBackground(Color.white);
+        teaflavoringButton.setForeground(Color.white);
+        teaflavoringButton.setFocusPainted(false);
         c.add(teaflavoringButton);
         
         ImageIcon clubsodaImageIcon = new ImageIcon("src/imgs/clubsoda.png");
@@ -265,6 +319,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         sparkingwaterButton = new JButton(clubsodaIcon);
         sparkingwaterButton.addActionListener(this);
         sparkingwaterButton.setVisible(false);
+        sparkingwaterButton.setBorderPainted(false);
+        sparkingwaterButton.setBackground(Color.white);
+        sparkingwaterButton.setForeground(Color.white);
+        sparkingwaterButton.setFocusPainted(false);
         c.add(sparkingwaterButton);
         
         ImageIcon syrupImageIcon = new ImageIcon("src/imgs/syrup.png");
@@ -274,6 +332,10 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         syrupButton = new JButton(syrupIcon);
         syrupButton.addActionListener(this);
         syrupButton.setVisible(false);
+        syrupButton.setBorderPainted(false);
+        syrupButton.setBackground(Color.white);
+        syrupButton.setForeground(Color.white);
+        syrupButton.setFocusPainted(false);
         c.add(syrupButton);
         
         croissantButton = new JButton("Croissant");
@@ -341,11 +403,15 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon backbuttonImageIcon = new ImageIcon("src/imgs/backbutton.png");
         Image backbuttonImage = backbuttonImageIcon.getImage();
-        Image backbuttonNewimg = backbuttonImage.getScaledInstance(30, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image backbuttonNewimg = backbuttonImage.getScaledInstance(400, 45,  java.awt.Image.SCALE_SMOOTH);
         Icon backbuttonIcon = new ImageIcon(backbuttonNewimg);
         menuButton = new JButton(backbuttonIcon);
+        menuButton.setBackground(Color.white);
+        menuButton.setForeground(Color.white);
+        menuButton.setBorderPainted(false);
         menuButton.addActionListener(this);
         menuButton.setVisible(false);
+        menuButton.setFocusPainted(false);
         c.add(menuButton);
         
         ImageIcon recipeImageIcon = new ImageIcon("src/imgs/recipes.png");
