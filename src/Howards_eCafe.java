@@ -55,6 +55,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
     private JLabel rightLabel;
     private JLabel backgroundLabel;
     private JLabel recipeLabel;
+    private JLabel drinkInstructions;
+    private JLabel ingredientsInstructions;
     private JLayeredPane layeredPane;
     private JLayeredPane recipelayeredPane;
     
@@ -165,6 +167,14 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         latteInstructions = new JLabel("Ice, Milk, Flavoring, Coffee");
         c.add(latteInstructions);
         latteInstructions.setVisible(false);
+        
+        drinkInstructions = new JLabel("Read the instructions, then pick a drink to make");
+        c.add(drinkInstructions);
+        drinkInstructions.setVisible(false);
+        
+        ingredientsInstructions = new JLabel("Pick the correct ingredidents in order to make your drink");
+        c.add(ingredientsInstructions);
+        ingredientsInstructions.setVisible(false);
         
         //Ingredients
         ImageIcon iceImageIcon = new ImageIcon("src/imgs/ice.png");
@@ -411,6 +421,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             icedTeaButton.setVisible(true);
             instructionsButton.setVisible(true);
             menuButton.setVisible(false);
+            ingredientsInstructions.setVisible(false);
+            drinkInstructions.setVisible(true);
             
         } else if (e.getSource() == latteButton) {
         	drink = 1;
@@ -442,6 +454,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             lemonloafButton.setVisible(false);
             instructionsButton.setVisible(false);
             menuButton.setVisible(false);
+            ingredientsInstructions.setVisible(true);
+            drinkInstructions.setVisible(false);
+
             }
             	
         else if (e.getSource() == hotchocolateButton) {
@@ -473,7 +488,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
             instructionsButton.setVisible(false);
-            menuButton.setVisible(false);            
+            menuButton.setVisible(false); 
+            ingredientsInstructions.setVisible(true);
+            drinkInstructions.setVisible(false);
             
         } else if (e.getSource() == mochaButton) { 
         	drink = 3;
@@ -504,7 +521,9 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
             instructionsButton.setVisible(false);
-            menuButton.setVisible(false);           
+            menuButton.setVisible(false);   
+            ingredientsInstructions.setVisible(true);
+            drinkInstructions.setVisible(false);
             
         } else if (e.getSource() == matchaButton) { 
         	drink = 4;
@@ -536,6 +555,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             lemonloafButton.setVisible(false);
             instructionsButton.setVisible(false);
             menuButton.setVisible(false);
+            ingredientsInstructions.setVisible(true);
+            drinkInstructions.setVisible(false);
                        
         } else if (e.getSource() == sodaButton) {
         	drink = 5;
@@ -567,6 +588,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             lemonloafButton.setVisible(false);
             instructionsButton.setVisible(false);
             menuButton.setVisible(false);          
+            ingredientsInstructions.setVisible(true);
+            drinkInstructions.setVisible(false);
             
         } else if (e.getSource() == icedTeaButton) {
         	drink = 6;
@@ -598,6 +621,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             lemonloafButton.setVisible(false);
             instructionsButton.setVisible(false);
             menuButton.setVisible(false); 
+            ingredientsInstructions.setVisible(true);
+            drinkInstructions.setVisible(false);
             
             
         } else if (e.getSource() == instructionsButton) {
@@ -630,6 +655,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
                 donutButton.setVisible(false);
                 lemonloafButton.setVisible(false);
                 menuButton.setVisible(true); 
+                ingredientsInstructions.setVisible(true);
+                drinkInstructions.setVisible(false);
                 
         } else if (e.getSource() == menuButton) {
             continueButton.setVisible(false);
@@ -661,6 +688,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             donutButton.setVisible(false);
             lemonloafButton.setVisible(false);
             menuButton.setVisible(false); 
+            ingredientsInstructions.setVisible(false);
+            drinkInstructions.setVisible(false);
             }
         
     else if (e.getSource() == playagainButton) {
@@ -694,6 +723,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         donutButton.setVisible(false);
         lemonloafButton.setVisible(false);
         menuButton.setVisible(false); 
+        ingredientsInstructions.setVisible(false);
+        drinkInstructions.setVisible(false);
         System.out.println("Play Again");
         correct = 0;
         drink = 0;
@@ -970,6 +1001,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             rightLabel.setVisible(true);
             instructionsButton.setVisible(false);
             menuButton.setVisible(false);
+            ingredientsInstructions.setVisible(false);
+            drinkInstructions.setVisible(false);
             playSoundEffect("src/audio/correct_answer.wav"); 
         }
 
@@ -1004,6 +1037,8 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             wrongLabel.setVisible(true);
             instructionsButton.setVisible(false);
             menuButton.setVisible(false);
+            ingredientsInstructions.setVisible(false);
+            drinkInstructions.setVisible(false);
             playSoundEffect("src/audio/wrong_answer.wav");         
             }
     }
