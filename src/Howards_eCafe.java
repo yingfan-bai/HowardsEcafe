@@ -108,7 +108,11 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         setVisible(true);
         
         //Menu
-                        
+                  
+        drinkInstructions = new JLabel("Read the instructions, then pick a drink to make");
+        c.add(drinkInstructions);
+        drinkInstructions.setVisible(false);
+        
         ImageIcon latteImageIcon = new ImageIcon("src/imgs/icedlatte.png");
         Image latteImage = latteImageIcon.getImage();
         Image latteNewimg = latteImage.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
@@ -186,9 +190,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         c.add(latteInstructions);
         latteInstructions.setVisible(false);
         
-        drinkInstructions = new JLabel("Read the instructions, then pick a drink to make");
-        c.add(drinkInstructions);
-        drinkInstructions.setVisible(false);
+        
         
         ingredientsInstructions = new JLabel("Pick the correct ingredidents in order to make your drink");
         c.add(ingredientsInstructions);
