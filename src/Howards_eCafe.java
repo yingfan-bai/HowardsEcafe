@@ -382,7 +382,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
         
         ImageIcon backbuttonImageIcon = new ImageIcon("src/imgs/backbutton.png");
         Image backbuttonImage = backbuttonImageIcon.getImage();
-        Image backbuttonNewimg = backbuttonImage.getScaledInstance(30, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image backbuttonNewimg = backbuttonImage.getScaledInstance(400, 45,  java.awt.Image.SCALE_SMOOTH);
         Icon backbuttonIcon = new ImageIcon(backbuttonNewimg);
         menuButton = new JButton(backbuttonIcon);
         menuButton.setBackground(Color.white);
