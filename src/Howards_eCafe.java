@@ -721,7 +721,7 @@ public class Howards_eCafe extends JFrame implements ActionListener {
                 donutButton.setVisible(false);
                 lemonloafButton.setVisible(false);
                 menuButton.setVisible(true); 
-                ingredientsInstructions.setVisible(true);
+                ingredientsInstructions.setVisible(false);
                 drinkInstructions.setVisible(false);
                 
         } else if (e.getSource() == menuButton) {
