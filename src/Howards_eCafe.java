@@ -1111,7 +1111,3 @@ public class Howards_eCafe extends JFrame implements ActionListener {
             }
     }
 }
-
-
-
-
